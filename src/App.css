@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+
+button.search-btn{
+  background-color: #337ab7;
+  color: white;
+  margin-left: 10px;
+}
+
+input.search, input.refine {
+  width: 30%
+}
