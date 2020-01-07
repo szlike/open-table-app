@@ -43,6 +43,10 @@ button.search-btn{
   margin-left: 10px;
 }
 
-input.search, input.refine {
+input.search {
   width: 30%
+}
+
+input.refine {
+  width: 22%
 }

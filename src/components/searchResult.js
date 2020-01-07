@@ -1,7 +1,7 @@
 import React from 'react';
 import Table from 'react-bootstrap/Table'
 
-export default class SearchByCityComponent extends React.Component {
+export default class SearchResultComponent extends React.Component {
     constructor(props){
         super(props)
         this.prompt = ''
@@ -30,8 +30,7 @@ export default class SearchByCityComponent extends React.Component {
 
             return (
                 <div className='search-result'>
-                    <input placeholder='type more information to refine search' className='input refine' aria-label='refine your search' type='text' name='refineSearch' value={refineValue}/> 
-                    <button className='search-btn refine' type='button' onClick={e=>{return refineSearch(e.target.previousElementSibling.value)}}>Refine</button>
+                    <input placeholder='type more information to refine search' className='input refine' aria-label='refine your search' type='text' name='refineSearch' value={refineValue} onChange={e=>{return refineSearch(e.target.value)}}/> 
                     <Table striped bordered hover>
                         <thead>
                             <tr>
