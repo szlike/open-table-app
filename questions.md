@@ -6,8 +6,7 @@ Around five hours
 
 Using keystroke (keyup or keydown) instead of button to trigger search and refine action. Will add pagination and mouse-scroll to load more result in case responses are huge. These can improve performance.
 
-
-**What was the most useful feature that was added to the latest version of your chosen language? Please include a snippet of code that shows how you've used it. ** <br />
+**What was the most useful feature that was added to the latest version of your chosen language? Please include a snippet of code that shows how you've used it.** <br />
 
 I like how Template literals (${}) improve code cleaness and tideness.
 
