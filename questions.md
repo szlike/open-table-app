@@ -4,7 +4,7 @@ Around five hours
 
 **What would you add to your solution if you had more time?** <br />
 
-Using keystroke (keyup or keydown) instead of button to trigger search and refine action. Will add pagination and mouse-scroll to load more result in case responses are huge. These can improve performance.
+add debounce method to keystroke onChange method. Will add pagination and mouse-scroll to load more result in case responses are huge. These can improve performance.
 
 **What was the most useful feature that was added to the latest version of your chosen language? Please include a snippet of code that shows how you've used it.** <br />
 
@@ -16,8 +16,8 @@ Arrow function provide this binding which produce a much simplier structre and w
 
 for example: <br />
 ```
-function displayFancySentences(who, what, how){
-  return `${who} and Peter ${what} ${how}`
+function formADynamicString(Name, Subject, When){
+  return `${Name} like to ${Do} ${when}`
 }
 ```
 ```
@@ -29,12 +29,25 @@ let data = [1, 2, 3];
 foo( ...data); // a=5, b=15, c=2
 ```
 ```
-var foo = function( a, b ) { return a * b;}
-V.S.
-let bar = ( a, b ) => a * b;
+Using arrow function in react class method can prevent using function.bind(this)
+functionName = (parameters) => {
+    ....code ...
+}
+V.S
+constructor(){
+  functionName.bind(this)
+}
+
 ```
 **How would you track down a performance issue in production? Have you ever had to do this?** <br />
 
+1. open network tab under chrome developer tool and check if too many image loading, or a single call is blocking entire app.
+2. chrome developer tool performance tab provide tools to profile web page.
+3. Use chrome developer tool memory tab to meature memory usage.
 
 
 **Please describe yourself using JSON.** <br />
+
+JSON is popular data structure that heavily used in RESTFUl and even NOSQL.
+There are some nice libraries providing deepMerge or deepEqual function which improves our work efficiency.
+Writing script to scan, modify and construct massive JSON files.
