@@ -12,7 +12,7 @@ export default class SearchByCityComponent extends React.Component {
     }
 
     render() {
-        const { refineSearch, items} = this.props
+        const { refineSearch, refineValue, items} = this.props
         let result;
         if (!Array.isArray(items) || items.length === 0) {
             result = this.prompt
@@ -30,7 +30,7 @@ export default class SearchByCityComponent extends React.Component {
 
             return (
                 <div className='search-result'>
-                    <input placeholder='type more information to refine search' className='input refine' aria-label='refine your search' type='text' name='refineSearch' value={refineSearch}/> 
+                    <input placeholder='type more information to refine search' className='input refine' aria-label='refine your search' type='text' name='refineSearch' value={refineValue}/> 
                     <button className='search-btn refine' type='button' onClick={e=>{return refineSearch(e.target.previousElementSibling.value)}}>Refine</button>
                     <Table striped bordered hover>
                         <thead>

@@ -2,7 +2,10 @@ import { combineReducers } from 'redux'
 import {
   REQUEST_POSTS,
   RECEIVE_POSTS,
-} from '../actions/index'
+} from '../actions/searchByCity'
+import {
+  REFINE_SEARCH
+} from '../actions/refineSearch'
 
 
 function searchByCity (state = [], action) {
@@ -21,8 +24,20 @@ function searchByCity (state = [], action) {
     }
 }
 
+function refineSearch(state=[], action){
+  switch(action.type) {
+    case REFINE_SEARCH:
+      return Object.assign({}, state, {
+        data: action.data
+      })
+    default:
+      return state
+  }
+}
+
 const rootReducer = combineReducers({
-  searchByCity
+  searchByCity,
+  refineSearch
 })
 
 export default rootReducer

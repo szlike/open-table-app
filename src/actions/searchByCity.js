@@ -1,9 +1,4 @@
 import fetch from 'cross-fetch'
-import {
-    REQUEST_POSTS,
-    RECEIVE_POSTS,
-  } from './index'
-
 
 function requestPosts(cityName) {
     return {
@@ -31,19 +26,22 @@ function receivePosts(cityName, json) {
     }
   }
 
-function fetchPosts(parameter) {
+function fetchPosts(cityName) {
     return dispatch => {
-      dispatch(requestPosts(parameter))
-      return fetch(`http://opentable.herokuapp.com/api/restaurants?city=${parameter}`)
+      dispatch(requestPosts(cityName))
+      return fetch(`http://opentable.herokuapp.com/api/restaurants?city=${cityName}`)
         .then(response => response.json())
-        .then(json => dispatch(receivePosts(parameter, json)))
+        .then(json => dispatch(receivePosts(cityName, json)))
     }
 }
 
-export function fetchPostsIfNeeded(cityName) {
+export function fetchCityIfNeeded(cityName) {
     return (dispatch, getState) => {
         if (!getState().isFetching){
             return dispatch(fetchPosts(cityName))
         }
     }
 }
+
+export const RECEIVE_POSTS = 'RECEIVE_POSTS'
+export const REQUEST_POSTS = 'REQUEST_POSTS'
