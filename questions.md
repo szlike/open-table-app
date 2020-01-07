@@ -6,6 +6,11 @@ Around five hours
 
 add debounce method to keystroke onChange method. Will add pagination and mouse-scroll to load more result in case responses are huge. These can improve performance.
 
+**If you didn't spend much time on the coding test then use this as an opportunity to explain what you would add.**
+
+I will write unit tests to validate and verify each component I create, then some integration test to test if they are correctly communicate with its parent/container component. Write more tests to cover edge cases, such as refreshing page, different procedures to use it, offline testing as well.
+
+
 **What was the most useful feature that was added to the latest version of your chosen language? Please include a snippet of code that shows how you've used it.** <br />
 
 I like how Template literals (${}) improve code cleaness and tideness.
